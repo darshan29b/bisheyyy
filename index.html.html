@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Will You Be Mine? 💖</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      background: linear-gradient(to bottom, #ffb6c1, #ffe6f0);
+      text-align: center;
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    h1 {
+      color: #ff2e63;
+      font-size: 2em;
+    }
+
+    .buttons {
+      margin-top: 40px;
+    }
+
+    button {
+      padding: 14px 30px;
+      font-size: 1.2em;
+      border: none;
+      border-radius: 30px;
+      margin: 10px;
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+
+    #yesBtn {
+      background: #ff2e63;
+      color: white;
+    }
+
+    #noBtn {
+      background: #ccc;
+    }
+  </style>
+</head>
+
+<body> 
+<h1>💘 Will You Be My Valentine? 💘</h1>
+
+<div class="buttons">
+  <!-- YES navigates -->
+  <a href="v2.html">
+    <button id="yesBtn">YES 💖</button>
+  </a>
+
+  <!-- NO does NOT navigate -->
+  <button id="noBtn" onclick="growYes()">NO 😢</button>
+</div>
+
+<script>
+  let scale = 1;
+
+  function growYes() {
+    scale += 0.2;
+    document.getElementById("yesBtn").style.transform =
+      "scale(" + scale + ")";
+
+    document.getElementById("noBtn").innerText =
+      "Are you sure? 🥺";
+  }
+</script>
+
+</body>
+</html>
